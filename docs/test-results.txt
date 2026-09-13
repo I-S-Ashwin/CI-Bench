@@ -1,0 +1,67 @@
+test_append_only_audit (test_demo.DemoTests.test_append_only_audit) ... ok
+test_approved_edit_blocked (test_demo.DemoTests.test_approved_edit_blocked) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/kaizens/1 HTTP/1.1" 400 -
+ok
+test_audit_role_denied (test_demo.DemoTests.test_audit_role_denied) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/audit HTTP/1.1" 403 -
+ok
+test_backup_restore (test_demo.DemoTests.test_backup_restore) ... ok
+test_benchmark (test_demo.DemoTests.test_benchmark) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/benchmark HTTP/1.1" 200 -
+ok
+test_draft_edit (test_demo.DemoTests.test_draft_edit) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/kaizens/121 HTTP/1.1" 403 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/kaizens/121 HTTP/1.1" 200 -
+ok
+test_full_workflow (test_demo.DemoTests.test_full_workflow) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens/122/submit HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens/122/review HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens/122/approve HTTP/1.1" 403 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens/122/approve HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/hd HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+ok
+test_higher_kpi (test_demo.DemoTests.test_higher_kpi) ... ok
+test_invalid_transition (test_demo.DemoTests.test_invalid_transition) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/1 HTTP/1.1" 400 -
+ok
+test_lower_kpi (test_demo.DemoTests.test_lower_kpi) ... ok
+test_missing_metadata (test_demo.DemoTests.test_missing_metadata) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/kaizens HTTP/1.1" 400 -
+ok
+test_negative (test_demo.DemoTests.test_negative) ... ok
+test_nonfinite (test_demo.DemoTests.test_nonfinite) ... ok
+test_recommendation (test_demo.DemoTests.test_recommendation) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/recommendations/1 HTTP/1.1" 200 -
+ok
+test_retrieval (test_demo.DemoTests.test_retrieval) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/search?q=welding%20fixture%20misalignment HTTP/1.1" 200 -
+ok
+test_unauthenticated (test_demo.DemoTests.test_unauthenticated) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/kaizens HTTP/1.1" 401 -
+ok
+test_unit_mismatch (test_demo.DemoTests.test_unit_mismatch) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/5 HTTP/1.1" 400 -
+ok
+test_unknown_record (test_demo.DemoTests.test_unknown_record) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "GET /api/v1/recommendations/999999 HTTP/1.1" 404 -
+ok
+test_window_mismatch (test_demo.DemoTests.test_window_mismatch) ... 127.0.0.1 - - [13/Sep/2026 06:32:29] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 06:32:29] "PATCH /api/v1/hd/5 HTTP/1.1" 400 -
+ok
+test_zero_baseline (test_demo.DemoTests.test_zero_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 1.964s
+
+OK

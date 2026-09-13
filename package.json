@@ -1,0 +1,21 @@
+{
+  "name": "ci-bench-workspace",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "start": "python -m app.server",
+    "build": "node frontend/build.cjs",
+    "test:api": "python -m unittest discover -s tests -v",
+    "test:ui": "python tests/run_ui.py",
+    "test": "npm run test:api && npm run test:ui"
+  },
+  "dependencies": {
+    "lucide-react": "0.468.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9",
+    "jsdom": "26.1.0"
+  }
+}

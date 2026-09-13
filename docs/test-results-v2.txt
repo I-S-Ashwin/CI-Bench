@@ -1,0 +1,218 @@
+test_approved_evidence_frozen (test_collaboration.CollaborationTests.test_approved_evidence_frozen) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/media HTTP/1.1" 400 -
+ok
+test_archive_rejects_traversal (test_collaboration.CollaborationTests.test_archive_rejects_traversal) ... ok
+test_archive_restores_media (test_collaboration.CollaborationTests.test_archive_restores_media) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/media HTTP/1.1" 201 -
+ok
+test_bookmark_collection (test_collaboration.CollaborationTests.test_bookmark_collection) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/bookmark HTTP/1.1" 200 -
+ok
+test_caption_tracks (test_collaboration.CollaborationTests.test_caption_tracks) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/media HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/caption HTTP/1.1" 200 -
+ok
+test_disallowed_executable (test_collaboration.CollaborationTests.test_disallowed_executable) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/media HTTP/1.1" 400 -
+ok
+test_feedback (test_collaboration.CollaborationTests.test_feedback) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/collab/feedback HTTP/1.1" 201 -
+ok
+test_media_persistence_and_hash (test_collaboration.CollaborationTests.test_media_persistence_and_hash) ... 127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:31] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 201 -
+ok
+test_mentions_and_resolve (test_collaboration.CollaborationTests.test_mentions_and_resolve) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/comment HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/notifications HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/resolve HTTP/1.1" 200 -
+ok
+test_mismatched_file (test_collaboration.CollaborationTests.test_mismatched_file) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 400 -
+ok
+test_observation_and_independent_verification (test_collaboration.CollaborationTests.test_observation_and_independent_verification) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/observation HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/verify-observation HTTP/1.1" 200 -
+ok
+test_observation_bad_dates (test_collaboration.CollaborationTests.test_observation_bad_dates) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/observation HTTP/1.1" 400 -
+ok
+test_pack_and_qr (test_collaboration.CollaborationTests.test_pack_and_qr) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/pack?kind=kaizens&id=129 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/qr?id=1 HTTP/1.1" 200 -
+ok
+test_private_media_denied (test_collaboration.CollaborationTests.test_private_media_denied) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/file?id=5 HTTP/1.1" 403 -
+ok
+test_private_record_denied (test_collaboration.CollaborationTests.test_private_record_denied) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/record?kind=kaizens&id=131 HTTP/1.1" 403 -
+ok
+test_private_task_not_leaked (test_collaboration.CollaborationTests.test_private_task_not_leaked) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/task HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/workspace HTTP/1.1" 200 -
+ok
+test_read_notification_ownership (test_collaboration.CollaborationTests.test_read_notification_ownership) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/comment HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/notifications HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/read HTTP/1.1" 403 -
+ok
+test_reply_wrong_parent (test_collaboration.CollaborationTests.test_reply_wrong_parent) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/comment HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/comment HTTP/1.1" 400 -
+ok
+test_revision_copies_evidence (test_collaboration.CollaborationTests.test_revision_copies_evidence) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens/136/submit HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens/136/review HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens/136/approve HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/revision HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "GET /api/v1/collab/record?kind=kaizens&id=137 HTTP/1.1" 200 -
+ok
+test_revision_not_owner (test_collaboration.CollaborationTests.test_revision_not_owner) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/revision HTTP/1.1" 403 -
+ok
+test_revision_preserves_original (test_collaboration.CollaborationTests.test_revision_preserves_original) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/revision HTTP/1.1" 201 -
+ok
+test_scanner_rejects_infected_file (test_collaboration.CollaborationTests.test_scanner_rejects_infected_file) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 400 -
+ok
+test_task_access_and_update (test_collaboration.CollaborationTests.test_task_access_and_update) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/task HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "PATCH /api/v1/collab/task HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "PATCH /api/v1/collab/task HTTP/1.1" 400 -
+ok
+test_transcript_assistance (test_collaboration.CollaborationTests.test_transcript_assistance) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/transcript-draft HTTP/1.1" 200 -
+ok
+test_translation (test_collaboration.CollaborationTests.test_translation) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/translation HTTP/1.1" 201 -
+ok
+test_upload_requires_acknowledgement (test_collaboration.CollaborationTests.test_upload_requires_acknowledgement) ... 127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:32] "POST /api/v1/collab/media HTTP/1.1" 400 -
+ok
+test_append_only_audit (test_demo.DemoTests.test_append_only_audit) ... ok
+test_approved_edit_blocked (test_demo.DemoTests.test_approved_edit_blocked) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/kaizens/1 HTTP/1.1" 400 -
+ok
+test_audit_role_denied (test_demo.DemoTests.test_audit_role_denied) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/audit HTTP/1.1" 403 -
+ok
+test_backup_restore (test_demo.DemoTests.test_backup_restore) ... ok
+test_benchmark (test_demo.DemoTests.test_benchmark) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/benchmark HTTP/1.1" 200 -
+ok
+test_draft_edit (test_demo.DemoTests.test_draft_edit) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/kaizens/121 HTTP/1.1" 403 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/kaizens/121 HTTP/1.1" 200 -
+ok
+test_full_workflow (test_demo.DemoTests.test_full_workflow) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens/122/submit HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens/122/review HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens/122/approve HTTP/1.1" 403 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens/122/approve HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/hd HTTP/1.1" 201 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/25 HTTP/1.1" 200 -
+ok
+test_higher_kpi (test_demo.DemoTests.test_higher_kpi) ... ok
+test_invalid_transition (test_demo.DemoTests.test_invalid_transition) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/1 HTTP/1.1" 400 -
+ok
+test_lower_kpi (test_demo.DemoTests.test_lower_kpi) ... ok
+test_missing_metadata (test_demo.DemoTests.test_missing_metadata) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/kaizens HTTP/1.1" 400 -
+ok
+test_negative (test_demo.DemoTests.test_negative) ... ok
+test_nonfinite (test_demo.DemoTests.test_nonfinite) ... ok
+test_recommendation (test_demo.DemoTests.test_recommendation) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/recommendations/1 HTTP/1.1" 200 -
+ok
+test_retrieval (test_demo.DemoTests.test_retrieval) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/search?q=welding%20fixture%20misalignment HTTP/1.1" 200 -
+ok
+test_unauthenticated (test_demo.DemoTests.test_unauthenticated) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/kaizens HTTP/1.1" 401 -
+ok
+test_unit_mismatch (test_demo.DemoTests.test_unit_mismatch) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "PATCH /api/v1/hd/5 HTTP/1.1" 400 -
+ok
+test_unknown_record (test_demo.DemoTests.test_unknown_record) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:34] "GET /api/v1/recommendations/999999 HTTP/1.1" 404 -
+ok
+test_window_mismatch (test_demo.DemoTests.test_window_mismatch) ... 127.0.0.1 - - [13/Sep/2026 07:03:34] "POST /api/v1/session HTTP/1.1" 200 -
+127.0.0.1 - - [13/Sep/2026 07:03:35] "PATCH /api/v1/hd/5 HTTP/1.1" 400 -
+ok
+test_zero_baseline (test_demo.DemoTests.test_zero_baseline) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 4.800s
+
+OK
