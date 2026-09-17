@@ -10,7 +10,7 @@ async function ready(predicate){for(let i=0;i<200;i++){if(predicate())return;awa
 function nav(name){const b=[...w.document.querySelectorAll('.app-sidebar nav button')].find(b=>b.textContent.includes(name));assert.ok(b,name);b.click()}
 function click(selector){const el=w.document.querySelector(selector);assert.ok(el,selector);el.click()}
 async function main(){
- await ready(()=>w.document.querySelector('h1')?.textContent.includes('Manufacturing improvement'));
+ await ready(()=>w.document.querySelector('h1')?.textContent.includes('Turn proven improvements'));
  assert.equal(w.document.querySelectorAll('.metric-card').length,4);assert.equal(w.document.querySelectorAll('.column-group').length,3);
  nav('Kaizen repository');await ready(()=>w.document.querySelector('.knowledge-card'));
  assert.equal(w.document.querySelectorAll('.knowledge-card').length,9);
@@ -26,6 +26,8 @@ async function main(){
  nav('Work hub');await ready(()=>w.document.querySelector('.template-grid'));assert.equal(w.document.querySelectorAll('.template-grid>button').length,5);
  click('.template-grid>button');await ready(()=>w.document.querySelector('#kaizen-form'));assert.match(w.document.querySelector('#kaizen-form [name=problem]').value,/defect/);
  w.document.querySelector('#dialog').close();nav('Equipment library');await ready(()=>w.document.querySelector('.equipment-card'));assert.equal(w.document.querySelectorAll('.equipment-card').length,9);
+ for(const src of new Set([...w.document.querySelectorAll('.equipment-visual')].map(i=>i.getAttribute('src')))){const response=await w.fetch(src);assert.equal(response.status,200,src);assert.match(response.headers.get('content-type'),/image\/png/)}
+ const search=w.document.querySelector('input[type=search]');Object.getOwnPropertyDescriptor(w.HTMLInputElement.prototype,'value').set.call(search,'EQ-001');search.dispatchEvent(new w.Event('input',{bubbles:true}));await ready(()=>w.document.querySelectorAll('.equipment-card').length===1);assert.match(w.document.querySelector('.equipment-card').textContent,/EQ-001/);
  assert.deepEqual(errors,[]);console.log('PASS: React integration checks across all 8 pages, pagination, chart data, record workspace, assignment, deployment management and template forms.');dom.window.close();
 }
 main().catch(e=>{console.error(e);dom.window.close();process.exitCode=1});
