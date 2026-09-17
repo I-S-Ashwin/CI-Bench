@@ -2,7 +2,34 @@
 const fs=require('node:fs');const assert=require('node:assert/strict');const {JSDOM}=require('jsdom');
 const html=fs.readFileSync('static/index.html','utf8').replace(/<script[^>]*><\/script>/g,'');
 const dom=new JSDOM(html,{url:process.env.CI_TEST_ORIGIN||'http://127.0.0.1:8767',runScripts:'dangerously'});const w=dom.window;
-w.fetch=(path,options)=>fetch(new URL(path,w.location.href),options);w.scrollTo=()=>{};w.URL.createObjectURL=()=> 'blob:fixture';w.URL.revokeObjectURL=()=>{};
+const http=require('node:http');
+w.fetch=(path,options={})=>{
+ const u=new URL(path,w.location.href);
+ return new Promise((resolve,reject)=>{
+  const headers={...options.headers};
+  const body=options.body?Buffer.from(options.body):null;
+  if(body)headers['Content-Length']=body.length;
+  const req=http.request(u,{method:options.method||'GET',headers},res=>{
+   const chunks=[];
+   res.on('data',d=>chunks.push(d));
+   res.on('end',()=>{
+    const buf=Buffer.concat(chunks);
+    resolve({
+     ok:res.statusCode>=200&&res.statusCode<300,
+     status:res.statusCode,
+     headers:new Map(Object.entries(res.headers)),
+     json:async()=>JSON.parse(buf.toString()||'{}'),
+     text:async()=>buf.toString(),
+     blob:async()=>new Blob([buf],{type:res.headers['content-type']||''})
+    });
+   });
+  });
+  req.on('error',reject);
+  if(body)req.write(body);
+  req.end();
+ });
+};
+w.scrollTo=()=>{};w.URL.createObjectURL=()=> 'blob:fixture';w.URL.revokeObjectURL=()=>{};
 w.HTMLDialogElement.prototype.showModal=function(){this.open=true};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
 const errors=[];w.addEventListener('error',e=>errors.push(e.message));
 w.eval(fs.readFileSync('static/react/workflows.js','utf8'));w.eval(fs.readFileSync('static/react/app.js','utf8'));
